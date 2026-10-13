@@ -1,0 +1,72 @@
+# Dependencies and npm artifacts (GitHub's Node template)
+node_modules/
+.npm/
+*.tgz
+
+# Build output: Stencil, Angular, React, Vue, and Storybook
+dist/
+www/
+loader/
+out-tsc/
+storybook-static/
+apps/angular/tmp/
+apps/angular/e2e/test-output/
+
+# Tool caches and reports
+.stencil/
+.angular/
+.ng/
+.vite/
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+coverage/
+.nyc_output/
+*.lcov
+test-results/
+playwright-report/
+
+# Local logs and diagnostics
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Local environment values; commit example files
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Editors (GitHub's VS Code and JetBrains templates)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.idea/
+*.iws
+*.swp
+*.swo
+
+# Operating system files (GitHub's macOS, Windows, and Linux templates)
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+.localized
+__MACOSX/
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.fuse_hidden*
+.nfs*
+*~
+
+# Keep package-lock.json and packages/motion/src/components.d.ts tracked.

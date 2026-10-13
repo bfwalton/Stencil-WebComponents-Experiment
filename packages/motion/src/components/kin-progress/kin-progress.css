@@ -1,0 +1,10 @@
+:host { display: inline-block; width: 174px; color: var(--kin-text, #f4f8ed); font-family: system-ui, sans-serif; }
+      .wrap { position: relative; aspect-ratio: 1; display: grid; place-items: center; }
+      svg { width: 100%; height: 100%; transform: rotate(-90deg); overflow: visible; }
+      .track { fill: none; stroke: var(--kin-track, #344438); stroke-width: 7; }
+      .meter { fill: none; stroke: var(--kin-accent, #dcff7a); stroke-width: 7; stroke-linecap: round; stroke-dasharray: 289.02652413026095; stroke-dashoffset: 289.02652413026095; filter: drop-shadow(0 0 7px color-mix(in srgb, var(--kin-accent, #dcff7a), transparent 45%)); transition: stroke-dashoffset .75s cubic-bezier(.18,.85,.25,1); }
+      .content { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 2px; }
+      strong { font-size: clamp(32px, 3.5vw, 44px); font-weight: 650; letter-spacing: -.065em; line-height: 1; font-variant-numeric: tabular-nums; }
+      small { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; opacity: .62; }
+      :focus-visible { outline: 3px solid var(--kin-focus, #ffce73); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }

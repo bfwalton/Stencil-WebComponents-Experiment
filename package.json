@@ -1,0 +1,16 @@
+{
+  "name": "webcomp-motion-workspace",
+  "private": true,
+  "type": "module",
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "build:components": "npm run build -w @webcomp/motion",
+    "storybook": "npm run storybook -w @webcomp/motion",
+    "build:storybook": "npm run build:storybook -w @webcomp/motion",
+    "dev:react": "npm run build:components && npm run dev -w demo-react",
+    "dev:vue": "npm run build:components && npm run dev -w demo-vue",
+    "dev:angular": "npm run build:components && npm run dev -w demo-angular",
+    "build": "npm run build:components && npm run build -w demo-react && npm run build -w demo-vue && npm run build -w demo-angular && npm run build:storybook -w @webcomp/motion"
+  },
+  "engines": { "node": ">=22.22.3" }
+}

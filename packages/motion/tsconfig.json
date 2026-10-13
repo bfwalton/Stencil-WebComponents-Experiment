@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ES2017",
+    "lib": ["DOM", "ES2017"],
+    "jsx": "react",
+    "jsxFactory": "h",
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src"]
+}

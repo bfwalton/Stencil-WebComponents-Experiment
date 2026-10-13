@@ -1,0 +1,29 @@
+{
+  "name": "@webcomp/motion",
+  "version": "0.1.0",
+  "description": "Small, animated Stencil web components for any framework",
+  "type": "module",
+  "sideEffects": true,
+  "files": ["dist/components", "dist/types", "README.md"],
+  "exports": {
+    ".": { "types": "./dist/components/index.d.ts", "import": "./dist/components/index.js" }
+  },
+  "main": "./dist/components/index.js",
+  "module": "./dist/components/index.js",
+  "types": "./dist/components/index.d.ts",
+  "scripts": {
+    "build": "stencil build",
+    "prepack": "npm run build",
+    "storybook": "npm run build && storybook dev -p 6006",
+    "build:storybook": "npm run build && storybook build"
+  },
+  "dependencies": { "@stencil/core": "^4.45.2" },
+  "devDependencies": {
+    "@storybook/addon-docs": "^10.6.0",
+    "@storybook/web-components-vite": "^10.6.0",
+    "lit-html": "^3.3.0",
+    "storybook": "^10.6.0"
+  },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=22.22.3" }
+}

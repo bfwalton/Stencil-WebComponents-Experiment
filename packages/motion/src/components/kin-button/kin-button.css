@@ -1,0 +1,16 @@
+:host { display: inline-block; --accent: var(--kin-accent, #dcff7a); --ink: var(--kin-ink, #182019); font: 600 14px/1.2 system-ui, sans-serif; }
+      button { position: relative; isolation: isolate; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 23px; border: 1px solid transparent; border-radius: 15px; background: var(--accent); color: var(--ink); box-shadow: 0 8px 22px color-mix(in srgb, var(--accent), transparent 77%); font: inherit; letter-spacing: .01em; cursor: pointer; transform: translateY(0); transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s ease, background .25s ease; }
+      button::before { content: ''; position: absolute; inset: 0; background: linear-gradient(110deg, transparent 25%, #fff8 48%, transparent 68%); transform: translateX(-130%); transition: transform .55s ease; pointer-events: none; }
+      button:hover:not(:disabled) { transform: translateY(-3px); box-shadow: 0 13px 30px color-mix(in srgb, var(--accent), transparent 66%); }
+      button:hover:not(:disabled)::before { transform: translateX(130%); }
+      button:active:not(:disabled) { transform: translateY(1px) scale(.98); }
+      :host([variant="quiet"]) button { background: var(--kin-surface, #26322b); color: var(--kin-text, #f4f8ed); border-color: var(--kin-border, #526452); box-shadow: none; }
+      :host([variant="quiet"]) button:hover:not(:disabled) { background: var(--kin-surface-hover, #344537); box-shadow: 0 10px 26px #0002; }
+      button:disabled { opacity: .52; cursor: not-allowed; box-shadow: none; }
+      .spinner { display: none; width: 16px; height: 16px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: spin .75s linear infinite; }
+      :host([loading]) .spinner { display: inline-block; }
+      .ripple { position: absolute; border-radius: 50%; background: currentColor; opacity: .18; transform: scale(0); pointer-events: none; animation: ripple .55s ease-out forwards; }
+      @keyframes ripple { to { transform: scale(1); opacity: 0; } }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      :focus-visible { outline: 3px solid var(--kin-focus, #ffce73); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
